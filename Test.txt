@@ -1,0 +1,290 @@
+1)
+---------------------------------------------------------------------------------------
+package com.Patterns;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class shuffleArray {
+
+	public static void main(String[] args) {
+
+		Integer[] intArray = { 1, 2, 3, 4, 5, 6, 7 };
+
+		List<Integer> intList = Arrays.asList(intArray);
+
+		Collections.shuffle(intList);
+
+		intList.toArray(intArray);
+
+		System.out.println(Arrays.toString(intArray));
+	}
+}
+---------------------------------------------------------------------------------
+2)
+package com.Patterns; 
+		import java.util.*;  
+		public class RomanToInteger2  
+		{  
+		    public static void convertRomanToInt(String s)  
+		    {  
+		        Map<Character, Integer> map=new HashMap<Character, Integer>();   
+		        map.put('I',1);  
+		        map.put('V',5);  
+		        map.put('X',10);  
+		        map.put('L',50);  
+		        map.put('C',100);  
+		        map.put('D',500);  
+		        map.put('M',1000);    
+		        s = s.replace("IV","IIII");  
+		        s = s.replace("IX","VIIII");  
+		        s = s.replace("XL","XXXX");  
+		        s = s.replace("XC","LXXXX");  
+		        s = s.replace("CD","CCCC");  
+		        s = s.replace("CM","DCCCC");  
+		        int number = 0;  
+		        for (int i = 0; i < s.length(); i++)  
+		        {    
+		            number = number + (map.get(s.charAt(i)));  
+		        }    
+		        System.out.println("The corresponding Integer value is: "+number);  
+		}    
+		    public static void main (String args[])  
+		    {  
+		        convertRomanToInt("XVII");  
+		    }    
+
+	}
+-----------------------------------------------------------------------------------------
+3)
+package com.jsp.Pack2;
+
+public class Panagram {
+
+	public static void main(String[] args) {
+		String s="The quick brown fox jumps over the lazy dog";
+		s=s.toLowerCase();
+		if(ispanagram(s))
+		{
+			System.out.println("it is a panagram");
+		}
+		else {
+			System.out.println("Not a panagram");
+		}
+	}
+	public static boolean ispanagram(String s)
+	{
+			if(s.length()<26)
+			{
+				return false;
+			}
+				for(int ch='a';ch<='z';ch++)
+				{
+					if(s.indexOf(ch)==-1)
+					{
+						return false;
+					}
+				}
+				return true;
+	}
+}
+------------------------------------------------------------------------------------
+4)
+package com.jsp.Pack2;
+
+class Avajisiysae {
+
+	public static void main(String[] args) {
+	String s="java is easy";
+	String[] s1=s.split(" ");
+	for(int i=0;i<s1.length;i++)
+	{
+		rev(s1[i]);
+	}
+	}
+	public static void rev(String  s)
+	{
+		for(int i=s.length()-1;i>=0;i--)
+		{
+		System.out.print(s.charAt(i));
+		}
+		System.out.print(" ");
+	}
+}
+------------------------------------------------------------------------------------------5)
+package com.jsp.Arrayspgms;
+
+import java.util.Arrays;
+
+public class Bubblesort {
+
+	public static void main(String[] args) {
+		int []a= {5,3,6,3,2,12,9};
+		System.out.println(Arrays.toString(a));
+		sort(a);
+		System.out.println(Arrays.toString(a));
+		
+		}
+	public static void sort(int[]a)
+	{
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=0;j<a.length-1;j++)
+			{
+				if(a[j]<a[j+1]) {
+				int temp=a[j];
+				a[j]=a[j+1];
+				a[j+1]=temp;
+				}
+			}
+		}
+	}
+}
+---------------------------------------------------------------------------------------	
+6)
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+  <meta charset="utf-8">
+  <title>Simple Calculator using HTML, CSS and JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+ 
+<body>
+ 
+<table class="calculator" >
+  <tr>
+    <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+ 
+    <!-- clearScreen() function clears all the values -->
+    <td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
+  </tr>
+  <tr>
+    <!-- display() function displays the value of clicked button -->
+    <td> <input type="button" value="1" onclick="display('1')" /> </td>
+    <td> <input type="button" value="2" onclick="display('2')" /> </td>
+    <td> <input type="button" value="3" onclick="display('3')" /> </td>
+    <td> <input type="button" value="/" onclick="display('/')" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="4" onclick="display('4')" /> </td>
+    <td> <input type="button" value="5" onclick="display('5')" /> </td>
+    <td> <input type="button" value="6" onclick="display('6')" /> </td>
+    <td> <input type="button" value="-" onclick="display('-')" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="7" onclick="display('7')" /> </td>
+    <td> <input type="button" value="8" onclick="display('8')" /> </td>
+    <td> <input type="button" value="9" onclick="display('9')" /> </td>
+    <td> <input type="button" value="+" onclick="display('+')" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="." onclick="display('.')" /> </td>
+    <td> <input type="button" value="0" onclick="display('0')" /> </td>
+ 
+    <!-- calculate() function evaluates the mathematical expression -->
+    <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+    <td> <input type="button" value="*" onclick="display('*')" /> </td>
+  </tr>
+</table>
+ 
+<script type="text/javascript" src="script.js"></script>
+ 
+</body>
+ 
+</html>
+---------------------------------------------------------------------------------------
+7)
+<!DOCTYPE html>
+<html>
+<head> Candidates Requirements<br>
+
+	<title >Fill the Form</title>
+	<style>
+		body
+		{
+			background-color:yellow ;
+		}
+	</style>
+</head>
+<body>
+	<label for="fname" co>First Name:- </label>
+	<input type="text" name="fname" name="fname" value=""><br>
+	<label for="lname" >Last Name:-</label>
+	<input type="text" name="lname" name="lname" value=""><br>
+	select Your Gender:-<br>
+	<input type="radio"name="gender" value="Male">
+	<label>Male</label><br>
+	<input type="radio" name="gender" value="Female">
+	<label>Female</label><br>
+	<input type="radio" name="gender" value="Others">
+	<label>Others</label><br>
+	Phone Number:-
+	<input type="number" size="10" placeholder="Phone Number" pattern="[6-9]{1}-[0-9]{9}" required><br>
+	Qulification:-<br>
+	<input type="radio" name="dept" value="CSE">
+	<label>CSE</label><br>
+	<input type="radio" name="dept" value="ECE">
+	<label>ECE</label><br>
+	<input type="radio" name="dept" value="EEE">
+	<label>EEE</label><br>
+	<input type="radio" name="dept" value="MECH">
+	<label>MECH</label><br>
+	<input type="radio" name="dept" value="CIv">
+	<label>CIV</label><br>
+	Overall Percentage:-<br>
+	<label for="Percentage">Percentage:-</label>
+	<input type="number"fname" name="Percentage" value="89"><br>
+	Select the Skills:-<br>
+	<input type="checkbox" >
+	<label>JAVA</label><br>
+	<select size="3" multiple>
+		<option><header><u>Ur rating</u></header></option>
+		<option>1</option>
+		<option>2</option>
+		
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select></br>
+	<input type="checkbox" >
+	<label>PYTHON</label><br>
+	<input type="checkbox">
+	<label>C++</label><br>
+	   Text Area:-
+	<textarea rows="5" cols="5"> ! Enter any content</textarea><br>
+	<fieldset>
+		<legend>Persional information:-</legend>
+		<label for="fname" co>First Name:- </label>
+	<input type="text" id ="fname" name="fname" value=""><br>
+	<label for="lname" >Last Name:-</label>
+	<input type="text" id="lname" name="lname" value=""><br>
+	</fieldset><br>
+	<fieldset>
+		<input list="num">
+		<datalist id="num">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</datalist>
+	</fieldset><br>
+	<label for="myfile">choose Resume</label><br>
+	<input type="file" id="myfile" name="myfile"><br>
+	Enter EmailID:-<br>
+	<input type="text"><br>
+	<label for="psw" ><b>password</b></label>
+	<input type="password" name="psw"  required ><br>
+	<input type="button" value="Submit">
+	<input type="button" value="Try Again">
+	<button>Refresh</button>
+	
+
+
+</body>
+</html>
+------------------------------------------OVER-------------------------------------
